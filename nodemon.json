@@ -1,0 +1,11 @@
+{
+    "restartable": "rs",
+    "ignore": [
+        ".git", "node_modules", "dist/, nodemon.json, package.json"
+    ],
+    "watch": ["src/**", "app.ts"],
+    "exec": "npm run start",
+    "ext": "ts,json",
+    "inspect": true,
+    "verbose": true
+}

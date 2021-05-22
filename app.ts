@@ -43,7 +43,7 @@ app.use(expressWinston.logger(loggerOptions));
 routes.push(new UsersRoutes(app));
 
 // this is a simple route to make sure everything is working properly
-const runningMessage = `Server running at http://localhost:${port}`;
+const runningMessage = `Server up and running`;
 app.get('/', (req: express.Request, res: express.Response) => {
     res.status(200).send(runningMessage)
 });

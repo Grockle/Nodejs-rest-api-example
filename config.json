@@ -1,3 +1,3 @@
 {
-    "mongoDb": "mongodb+srv://tugay108:4T4turk55@cluster0.7ea5y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongoDbConnectionString": "mongodb+srv://tugay108:4T4turk55@cluster0.7ea5y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }
