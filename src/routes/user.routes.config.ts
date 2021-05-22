@@ -1,19 +1,14 @@
 import {CommonRoutesConfig} from './common.routes.config';
 import express from 'express';
-
+import UserController from '../controllers/user.controller';
 export class UsersRoutes extends CommonRoutesConfig {
     constructor(app: express.Application) {
         super(app, 'UsersRoutes');
     }
 
-    configureRoutes() {
-        this.app.route(`/users`)
-        .get((req: express.Request, res: express.Response) => {
-            res.status(200).send(`List of users`);
-        })
-        .post((req: express.Request, res: express.Response) => {
-            res.status(200).send(`Post to users`);
-        });
+    configureRoutes(): express.Application {
+        this.app.route(`/users`).get(UserController.getAllUsers);
+        this.app.route(`/users`).post(UserController.create);
         return this.app;
     }
 
